@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <section>
+        <h1 class="text-center my-5">List Harga</h1>
+        <table class="table">
+            <thead class="table-primary">
+                <tr>
+                    <th>Item</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiket/Orang</td>
+                    <td>Rp.35.000,00</td>
+                </tr>
+                <tr>
+                    <td>Popcorn</td>
+                    <td>Rp. 10.000,00</td>
+                </tr>
+                <tr>
+                    <td>XIX Bread</td>
+                    <td>Rp. 10.000,00</td>
+                </tr>
+                <tr>
+                    <td>XIX Softdrink</td>
+                    <td>Rp. 5.000,00</td>
+                </tr>
+                <tr>
+                    <td>XIX Coldtea</td>
+                    <td>Rp. 5.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h1 class="text-center my-5">Registrasi Tiket</h1>
+        <form class="w-50">
+            <div class="mb-3">
+                <label for="input-nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="input-nama" required>
+                <div id="nama-help" class="form-text">Masukkan nama lengkap anda</div>
+            </div>
+            <div class="mb-3">
+                <label for="input-nomorhp" class="form-label">Nomor HP</label>
+                <input type="text" class="form-control" id="input-nomorhp" required>
+            </div>
+            <div class="mb-3">
+                <label for="input-jumlah-tiket" class="form-label">Jumlah Tiket</label>
+                <input type="number" class="form-control" id="input-jumlah-tiket" max="9" required>
+                <div id="input-jumlah-tiket-help" class="form-text">Masukkan dalam format angka</div>
+            </div>
+            <div class="mb-3">
+                <label for="input-tanggal-tiket" class="form-label">Tanggal nonton</label>
+                <input type="date" class="form-control" id="input-tanggal-tiket" required>
+            </div>
+            <div class="mb-3">
+                <label for="jenis-kelamin" class="form-label">Jenis Kelamin</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Laki-Laki
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Perempuan
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="film-pilihan" class="form-label">Film yang ditonton</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">Sang Kyai</option>
+                    <option value="2">Guru Bangsa Cokrominoto</option>
+                    <option value="3">Lion of The Desert</option>
+                    <option value="4">Battle of Empire</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="film-jadwal" class="form-label">Jadwal-nonton</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">Pagi</option>
+                    <option value="2">Siang</option>
+                    <option value="3">Malam</option>
+                    <option value="4">Sore</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="kritik-saran" class="form-label">Kritik dan Saran</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="kritik-saran" class="form-label">Makanan dan minuman yang anda pesan</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="Popcorn">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Popcorn
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2" id="bread">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        XIX Bread
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2" id="Softdrink">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        XIX Softdrink
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2" id="coldtea">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        XIX Coldtea
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="hitung()">Hitung</button><br>
+            <div class="mb-3">
+                <p>Total yang harus anda bayar adalah : <span id="total-bayar"></span></p>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <script src="../scripts/totalBayar.js"></script>
+</body>
+
+</html>
